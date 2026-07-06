@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── 4. ELECTION COUNTDOWN (live ticking) ─────
   const daysEl = document.getElementById('days');
   if (daysEl) {
-    let days = 28;
+    let days = 14;
     // Simulate slow countdown for atmosphere
     const tick = () => {
       daysEl.style.opacity = '0';
