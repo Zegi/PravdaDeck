@@ -1736,6 +1736,29 @@ body {
 }
 
 /* =============================================
+   OFFICE SECTION
+   ============================================= */
+.office-section {
+  background: var(--dark2);
+  border-top: 1px solid var(--dark3);
+}
+
+.office-wrapper {
+  text-align: center;
+}
+
+.office-pills {
+  margin-top: 32px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .office-pills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =============================================
    GUIDE SECTION
    ============================================= */
 .guide-section {
