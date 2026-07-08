@@ -229,6 +229,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── 14. LIGHTBOX FOR IMAGES ────────────────────
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  
+  if (lightbox && lightboxImg) {
+    const zoomableImages = document.querySelectorAll('.game-screenshot, .game-screenshot-menu, .game-screenshot-large, .consequence-img');
+    
+    zoomableImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  }
+
   console.log(
     '%c ПРАВДА v1.0 | Pitch Deck Loaded ',
     'background: #8b1a1a; color: #f0ece4; font-family: monospace; padding: 4px 8px; letter-spacing: 2px;'
